@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sibghat | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a, #020617);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #cbd5f5;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(2,6,23,0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #38bdf8;
+    }
+
+    .about p {
+      max-width: 800px;
+      font-size: 1.1rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-box {
+      background: #020617;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.2);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background: #020617;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .project h3 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+    }
+
+    .contact form {
+      max-width: 600px;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    .contact button {
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: #020617;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #0ea5e9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <h1>Sibghat</h1>
+    <p>Web Developer • Python Programmer • Tech Enthusiast</p>
+  </header>
+
+  <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      Hello! I'm <strong>Sibghat</strong>, a passionate developer with skills in HTML, CSS, JavaScript, Python, C/C++, and Flask. I enjoy building clean, modern, and efficient applications and learning advanced technologies like AI and Quantum Computing.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <div class="skill-box">HTML5</div>
+      <div class="skill-box">CSS3</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">Python</div>
+      <div class="skill-box">Flask</div>
+      <div class="skill-box">C / C++</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>AI Assistant</h3>
+        <p>Offline desktop assistant built using Python with voice commands and system control.</p>
+      </div>
+      <div class="project">
+        <h3>Car Racing Game</h3>
+        <p>Pygame-based racing game with AI cars, bombs, nitro boosters, and lap system.</p>
+      </div>
+      <div class="project">
+        <h3>Wikipedia GUI App</h3>
+        <p>Tkinter-based GUI that fetches live summaries from Wikipedia API.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2026 Sibghat | All Rights Reserved
+  </footer>
+
+  <script>
+    function sendMessage(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent (demo).");
+      document.querySelector('form').reset();
+    }
+  </script>
+
+</body>
+</html>
