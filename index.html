@@ -25,10 +25,10 @@
     header {
       height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-direction: row;
+      justify-content: space-between;
       align-items: center;
-      text-align: center;
+      padding: 0 10%;
       background: linear-gradient(135deg, #0f172a, #020617);
     }
 
@@ -174,8 +174,17 @@
   </nav>
 
   <header id="home">
-    <h1>Sibghat</h1>
-    <p>Web Developer • Python Programmer • Tech Enthusiast</p>
+    <div style="max-width:50%;">
+      <h1 style="font-size:3.8rem;color:#38bdf8;">Sibghat Ullah</h1>
+      <p style="font-size:1.3rem;margin-top:15px;color:#cbd5f5;">
+        Web Developer • Python Programmer • Tech Enthusiast
+      </p>
+    </div>
+
+    <div>
+      <img src="profile.png" alt="Sibghat Ullah" 
+      style="width:320px;border-radius:25px;box-shadow:0 25px 60px rgba(56,189,248,0.45);" />
+    </div>
   </header>
 
   <section id="about" class="about">
